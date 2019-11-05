@@ -215,10 +215,12 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = WZ3H725K95;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = WZ3H725K95;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -399,6 +401,8 @@
 			baseConfigurationReference = 7485E58E4EA3B423AC573516 /* Pods-PipelineAppTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = WZ3H725K95;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -414,6 +418,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PipelineAppTest.app/PipelineAppTest";
 			};
 			name = Debug;
@@ -423,6 +429,8 @@
 			baseConfigurationReference = 3A395DE604CEA6943E54E90E /* Pods-PipelineAppTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = WZ3H725K95;
 				INFOPLIST_FILE = PipelineAppTestTests/Info.plist;
@@ -435,6 +443,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PipelineAppTest.app/PipelineAppTest";
 			};
 			name = Release;
@@ -444,10 +454,13 @@
 			baseConfigurationReference = 394374BE0BC9A45873F34017 /* Pods-PipelineAppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = WZ3H725K95;
 				INFOPLIST_FILE = PipelineAppTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -456,6 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pipeline.mobile.test;
 				PRODUCT_NAME = PipelineAppTest;
+				PROVISIONING_PROFILE_SPECIFIER = PipelineAppTest;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -465,9 +479,12 @@
 			baseConfigurationReference = 42CC059CA874A10FE370FE88 /* Pods-PipelineAppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZ3H725K95;
 				INFOPLIST_FILE = PipelineAppTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -476,6 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pipeline.mobile.test;
 				PRODUCT_NAME = PipelineAppTest;
+				PROVISIONING_PROFILE_SPECIFIER = PipelineAppTest;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
